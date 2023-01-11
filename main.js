@@ -1,8 +1,6 @@
-const APILINK =
-  "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=4d7bc59ee5f6cac105ec00492977ef01&page=1";
-const IMG_PATH = "https://image.tmdb.org/t/p/w1280";
-const SEARCHAPI =
-  'https://api.themoviedb.org/3/movie?api_key=4d7bc59ee5f6cac105ec00492977ef01&query="';
+const APILINK = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=4d7bc59ee5f6cac105ec00492977ef01&page=1';
+const IMG_PATH = 'https://image.tmdb.org/t/p/w1280';
+const SEARCHAPI = "https://api.themoviedb.org/3/search/movie?api_key=4d7bc59ee5f6cac105ec00492977ef01&query=";
 
 const main = document.getElementById("section");
 const form = document.getElementById("form");
@@ -18,17 +16,17 @@ function returnMovies(url) {
         div_card.setAttribute("class", "card");
 
         const div_row = document.createElement("div");
-        div_card.setAttribute("class", "row");
+        div_row.setAttribute("class", "row");
 
         const div_column = document.createElement("div");
-        div_card.setAttribute("class", "column");
+        div_column.setAttribute("class", "column");
 
         const image = document.createElement("img");
-        div_card.setAttribute("class", "thumbnail");
-        div_card.setAttribute("id", "image");
+        image.setAttribute("class", "thumbnail");
+        image.setAttribute("id", "image");
 
         const title = document.createElement("h3");
-        div_card.setAttribute("id", "title");
+        title.setAttribute("id", "title");
 
         const center = document.createElement("center");
 
